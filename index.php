@@ -2,26 +2,20 @@
 
 <?php $students = [
     [
-        "Rafi",
-        "XI",
-        "PPLG",
-        17,
-        "HADIR"
+        'nama' => "Rafi",
+        'kelas' =>"XI",
+        'jurusan' =>"PPLG",
+        'umur' =>17,
+        'status' =>"HADIR"
     ],
     [
-        "Rafi",
-        "XI",
-        "PPLG",
-        17,
-        "SAKIT"
+        'nama' => "iman",
+        'kelas' =>"XI",
+        'jurusan' =>"PPLG",
+        'umur' =>17,
+        'status' =>"ALFA"
     ],
-    [
-        "Rafi",
-        "XI",
-        "PPLG",
-        17,
-        "ALFA"
-    ],
+
 ]?>
 
 
@@ -33,7 +27,7 @@
                 <button class="btn btn-primary">Tambah<i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
-        
+
             <div class="col-xxl-15">
                 <div class="panel">
                     <div class="panel-header">
@@ -57,20 +51,20 @@
                                 <?php for ($s=0; $s<count($students); $s++){?>
                                 <tr>
                                     <td><?= $s + 1?></td>
-                                    <td><?= $students[$s][0] ?></td>
-                                    <td><?= $students[$s][1] ?></td>
-                                    <td><?= $students[$s][2] ?></td>
-                                    <td><?= $students[$s][3] ?></td>
+                                    <td><?= $students[$s]['nama'] ?></td>
+                                    <td><?= $students[$s]['kelas'] ?></td>
+                                    <td><?= $students[$s]['jurusan'] ?></td>
+                                    <td><?= $students[$s]['umur'] ?></td>
                                     <td><span class="badge <?php 
-                                    if($students[$s][4] == 'HADIR') {
+                                    if($students[$s]['status'] == 'HADIR') {
                                        echo ' bg-success' ;
 
-                                    } else if($students[$s][4] == 'ALFA') {
+                                    } else if($students[$s]['status'] == 'ALFA') {
                                         echo ' bg-danger' ; 
                                     } else {
                                         echo ' bg-warning';
                                     }
-                                      ?>"><?= $students[$s][4] ;
+                                      ?>"><?= $students[$s]['status'] ;
                                      ?></span></span></td>
                                     <td>
                                         <div class="btn-box">
